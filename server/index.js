@@ -28,12 +28,11 @@ const transporter = nodemailer.createTransport({
   connectionTimeout: 30000, // 30 seconds
   greetingTimeout: 30000,
   socketTimeout: 30000,
-  // Add pool settings for better reliability
   pool: true,
   maxConnections: 5,
   maxMessages: 100,
   rateDelta: 1000, // 1 second
-  rateLimit: 5 // 5 messages per second
+  rateLimit: 5 
 });
 
 // Add retry logic for email sending with longer timeouts
